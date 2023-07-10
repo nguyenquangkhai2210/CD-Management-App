@@ -19,13 +19,14 @@ namespace CD_Management_System
     {
         CDStoreContext _context = new CDStoreContext();
         List<Account> listEmployee = new List<Account>();
-        AccountService _accountService;
+        public AccountService _accountService;
         public EmployeeManagement()
         {
             InitializeComponent();
             getAllEmployees();
 
         }
+
         private void getAllEmployees()
         {
             _accountService = new AccountService();
@@ -64,7 +65,7 @@ namespace CD_Management_System
             }
         }
 
-        private void btnCreate_click(object sender, EventArgs e)
+        public void btnCreate_click(object sender, EventArgs e)
         {
             Account account = new Account();
             if (txtUserName.Text == "" || txtFullName.Text == "" || txtEmail.Text == "" || txtAddress.Text == "" || txtPhoneNumber.Text == "" || txtPassword.Text == "")
@@ -88,6 +89,7 @@ namespace CD_Management_System
                 account.PhoneNumber = txtPhoneNumber.Text;
                 account.PassWord = txtPassword.Text;
                 account.RoleId = "EM";
+                _accountService.Create(account);
                 _accountService.Create(account);
                 refreshList();
             }
@@ -150,7 +152,7 @@ namespace CD_Management_System
             }
         }
 
-        private void btnUpdate_Click(object sender, EventArgs e)
+        public void btnUpdate_Click(object sender, EventArgs e)
         {
             var employee = _accountService.GetAll().Where(p => p.AccountId.Equals(Int32.Parse(txtAccountId.Text))).FirstOrDefault();
             if (Int32.Parse(txtAccountId.Text).Equals(employee.AccountId))

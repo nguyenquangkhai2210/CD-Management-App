@@ -307,28 +307,28 @@
 
         #endregion
 
-        private DataGridView dgvEmployee;
-        private Label label1;
-        private Label label6;
-        private TextBox txtAccountId;
-        private Label label4;
-        private TextBox txtUserName;
-        private Label label2;
-        private TextBox txtFullName;
-        private Label label3;
-        private TextBox txtEmail;
-        private Label label5;
-        private TextBox txtAddress;
-        private Label label7;
-        private TextBox txtPhoneNumber;
-        private Label Search;
-        private TextBox txtSearch;
-        private Button btnCreate;
-        private Button btnUpdate;
-        private Button btnDelete;
-        private Button btnSearch;
-        private Label label8;
-        private TextBox txtPassword;
-        private Button btnBack;
+        public DataGridView dgvEmployee;
+        public Label label1;
+        public Label label6;
+        public TextBox txtAccountId;
+        public Label label4;
+        public TextBox txtUserName;
+        public Label label2;
+        public TextBox txtFullName;
+        public Label label3;
+        public TextBox txtEmail;
+        public Label label5;
+        public TextBox txtAddress;
+        public Label label7;
+        public TextBox txtPhoneNumber;
+        public Label Search;
+        public TextBox txtSearch;
+        public Button btnCreate;
+        public Button btnUpdate;
+        public Button btnDelete;
+        public Button btnSearch;
+        public Label label8;
+        public TextBox txtPassword;
+        public Button btnBack;
     }
 }
