@@ -90,7 +90,6 @@ namespace CD_Management_System
                 account.PassWord = txtPassword.Text;
                 account.RoleId = "EM";
                 _accountService.Create(account);
-                _accountService.Create(account);
                 refreshList();
             }
 
